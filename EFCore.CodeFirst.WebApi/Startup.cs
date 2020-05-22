@@ -32,6 +32,7 @@ namespace EFCore.CodeFirst.WebApi
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+            services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
             #region Swagger
             services.AddSwaggerGen(c =>
             {

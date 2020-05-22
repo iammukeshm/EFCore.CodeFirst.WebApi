@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace EFCore.CodeFirst.WebApi.Contexts
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
