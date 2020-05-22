@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 
 namespace EFCore.CodeFirst.WebApi.Models
 {
-    public class Student
-    {
-        public int Id { get; set; }
+    public class Student : Entity
+    {   
         public int Age { get; set; }
         public int Roll { get; set; }
         public string Name { get; set; }
